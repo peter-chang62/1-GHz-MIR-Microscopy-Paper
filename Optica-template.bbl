@@ -1,0 +1,124 @@
+\begin{thebibliography}{10}
+\newcommand{\enquote}[1]{``#1''}
+
+\bibitem{baker_using_2014}
+M.~J. Baker, J.~Trevisan, P.~Bassan, R.~Bhargava, H.~J. Butler, K.~M. Dorling,
+  P.~R. Fielden, S.~W. Fogarty, N.~J. Fullwood, K.~A. Heys, C.~Hughes,
+  P.~Lasch, P.~L. Martin-Hirsch, B.~Obinaju, G.~D. Sockalingum, J.~Sulé-Suso,
+  R.~J. Strong, M.~J. Walsh, B.~R. Wood, P.~Gardner, and F.~L. Martin,
+  \enquote{Using {Fourier} transform {IR} spectroscopy to analyze biological
+  materials,} {\protect\JournalTitle{Nature Protocols}} \textbf{9}, 1771--1791
+  (2014).
+
+\bibitem{kee_simple_2004}
+T.~W. Kee and M.~T. Cicerone, \enquote{Simple approach to one-laser, broadband
+  coherent anti-{Stokes} {Raman} scattering microscopy,}
+  {\protect\JournalTitle{Optics Letters}} \textbf{29}, 2701 (2004).
+
+\bibitem{ploetz_femtosecond_2007}
+E.~Ploetz, S.~Laimgruber, S.~Berner, W.~Zinth, and P.~Gilch,
+  \enquote{Femtosecond stimulated {Raman} microscopy,}
+  {\protect\JournalTitle{Applied Physics B}} \textbf{87}, 389--393 (2007).
+
+\bibitem{evans_chemical_2005}
+C.~L. Evans, E.~O. Potma, M.~Puoris'haag, D.~Côté, C.~P. Lin, and X.~S. Xie,
+  \enquote{Chemical imaging of tissue \textit{in vivo} with video-rate coherent
+  anti-{Stokes} {Raman} scattering microscopy,}
+  {\protect\JournalTitle{Proceedings of the National Academy of Sciences}}
+  \textbf{102}, 16807--16812 (2005).
+
+\bibitem{saar_video-rate_2010}
+B.~G. Saar, C.~W. Freudiger, J.~Reichman, C.~M. Stanley, G.~R. Holtom, and
+  X.~S. Xie, \enquote{Video-{Rate} {Molecular} {Imaging} in {Vivo} with
+  {Stimulated} {Raman} {Scattering},} {\protect\JournalTitle{Science}}
+  \textbf{330}, 1368--1370 (2010).
+
+\bibitem{fu_quantitative_2012}
+D.~Fu, F.-K. Lu, X.~Zhang, C.~Freudiger, D.~R. Pernik, G.~Holtom, and X.~S.
+  Xie, \enquote{Quantitative {Chemical} {Imaging} with {Multiplex} {Stimulated}
+  {Raman} {Scattering} {Microscopy},} {\protect\JournalTitle{Journal of the
+  American Chemical Society}} \textbf{134}, 3623--3626 (2012).
+
+\bibitem{liao_microsecond_2015}
+C.-S. Liao, M.~N. Slipchenko, P.~Wang, J.~Li, S.-Y. Lee, R.~A. Oglesbee, and
+  J.-X. Cheng, \enquote{Microsecond scale vibrational spectroscopic imaging by
+  multiplex stimulated {Raman} scattering microscopy,}
+  {\protect\JournalTitle{Light: Science \& Applications}} \textbf{4},
+  e265--e265 (2015).
+
+\bibitem{chowdary_molecular_2010}
+P.~D. Chowdary, Z.~Jiang, E.~J. Chaney, W.~A. Benalcazar, D.~L. Marks,
+  M.~Gruebele, and S.~A. Boppart, \enquote{Molecular {Histopathology} by
+  {Spectrally} {Reconstructed} {Nonlinear} {Interferometric} {Vibrational}
+  {Imaging},} {\protect\JournalTitle{Cancer Research}} \textbf{70}, 9562--9569
+  (2010).
+
+\bibitem{ozeki_high-speed_2012}
+Y.~Ozeki, W.~Umemura, Y.~Otsuka, S.~Satoh, H.~Hashimoto, K.~Sumimura,
+  N.~Nishizawa, K.~Fukui, and K.~Itoh, \enquote{High-speed molecular spectral
+  imaging of tissue with stimulated {Raman} scattering,}
+  {\protect\JournalTitle{Nature Photonics}} \textbf{6}, 845--851 (2012).
+
+\bibitem{fu_hyperspectral_2013}
+D.~Fu, G.~Holtom, C.~Freudiger, X.~Zhang, and X.~S. Xie, \enquote{Hyperspectral
+  {Imaging} with {Stimulated} {Raman} {Scattering} by {Chirped} {Femtosecond}
+  {Lasers},} {\protect\JournalTitle{The Journal of Physical Chemistry B}}
+  \textbf{117}, 4634--4640 (2013).
+
+\bibitem{di_napoli_hyperspectral_2014}
+C.~Di~Napoli, I.~Pope, F.~Masia, P.~Watson, W.~Langbein, and P.~Borri,
+  \enquote{Hyperspectral and differential {CARS} microscopy for quantitative
+  chemical imaging in human adipocytes,} {\protect\JournalTitle{Biomedical
+  Optics Express}} \textbf{5}, 1378 (2014).
+
+\bibitem{lin_microsecond_2021}
+H.~Lin, H.~J. Lee, N.~Tague, J.-B. Lugagne, C.~Zong, F.~Deng, J.~Shin, L.~Tian,
+  W.~Wong, M.~J. Dunlop, and J.-X. Cheng, \enquote{Microsecond fingerprint
+  stimulated {Raman} spectroscopic imaging by ultrafast tuning and
+  spatial-spectral learning,} {\protect\JournalTitle{Nature Communications}}
+  \textbf{12}, 3052 (2021).
+
+\bibitem{ideguchi_coherent_2013}
+T.~Ideguchi, S.~Holzner, B.~Bernhardt, G.~Guelachvili, N.~Picqué, and T.~W.
+  Hänsch, \enquote{Coherent {Raman} spectro-imaging with laser frequency
+  combs,} {\protect\JournalTitle{Nature}} \textbf{502}, 355--358 (2013).
+
+\bibitem{nasse_high-resolution_2011}
+M.~J. Nasse, M.~J. Walsh, E.~C. Mattson, R.~Reininger, A.~Kajdacsy-Balla,
+  V.~Macias, R.~Bhargava, and C.~J. Hirschmugl, \enquote{High-resolution
+  {Fourier}-transform infrared chemical imaging with multiple synchrotron
+  beams,} {\protect\JournalTitle{Nature Methods}} \textbf{8}, 413--416 (2011).
+
+\bibitem{ullah_khan_direct_2020}
+F.~Ullah~Khan, G.~Guarnizo, and P.~Martín-Mateos, \enquote{Direct
+  hyperspectral dual-comb gas imaging in the mid-infrared,}
+  {\protect\JournalTitle{Optics Letters}} \textbf{45}, 5335 (2020).
+
+\bibitem{tamamitsu_ultrafast_2017}
+M.~Tamamitsu, Y.~Sakaki, T.~Nakamura, G.~K. Podagatlapalli, T.~Ideguchi, and
+  K.~Goda, \enquote{Ultrafast broadband {Fourier}-transform {CARS} spectroscopy
+  at 50,000 spectra/s enabled by a scanning {Fourier}-domain delay line,}
+  {\protect\JournalTitle{Vibrational Spectroscopy}} \textbf{91}, 163--169
+  (2017).
+
+\bibitem{yeh_fast_2015}
+K.~Yeh, S.~Kenkel, J.-N. Liu, and R.~Bhargava, \enquote{Fast {Infrared}
+  {Chemical} {Imaging} with a {Quantum} {Cascade} {Laser},}
+  {\protect\JournalTitle{Analytical Chemistry}} \textbf{87}, 485--493 (2015).
+
+\bibitem{coddington_dual-comb_2016}
+I.~Coddington, N.~Newbury, and W.~Swann, \enquote{Dual-comb spectroscopy,}
+  {\protect\JournalTitle{Optica}} \textbf{3}, 414 (2016).
+
+\bibitem{hoghooghi_broadband_2022}
+N.~Hoghooghi, S.~Xing, P.~Chang, D.~Lesko, A.~Lind, G.~Rieker, and S.~Diddams,
+  \enquote{Broadband 1-{GHz} mid-infrared frequency comb,}
+  {\protect\JournalTitle{Light: Science \& Applications}} \textbf{11}, 264
+  (2022).
+
+\bibitem{newbury_sensitivity_2010}
+N.~R. Newbury, I.~Coddington, and W.~Swann, \enquote{Sensitivity of coherent
+  dual-comb spectroscopy,} {\protect\JournalTitle{Optics Express}} \textbf{18},
+  7929 (2010).
+
+\end{thebibliography}
