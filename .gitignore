@@ -1,2 +1,18 @@
 
 .DS_Store
+
+Optica-template.aux
+
+Optica-template.fdb_latexmk
+
+Optica-template.bbl
+
+*.bbl
+
+*.blg
+
+*.fls
+
+*.log
+
+*.gz
