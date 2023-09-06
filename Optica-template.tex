@@ -17,7 +17,7 @@ Lorem ipsum $\sim$100 words
 \section{Introduction}
 IR spectroscopy has seen significant interest and application in bio-imaging because it provides a chemical fingerprint of underlying samples in a label-free way \cite{baker_using_2014}. However, although the most relevant chemical information can be gathered in the mid-infrared ($\sim$3 - 12 $\mathrm{\mu m}$), slow signal acquisition is often a limiting factor, whose trade-off can keep it from competing with label-based fluorescence microscopy.
 
-\mbox{Fig.\ref{fig:bckgnd}} attempts to visualize the significant developments that have been made in mid-infrared hyperspectral imaging over roughly the last two decades. Experiments are mapped onto the two important metrics of spectra acquisition speed, which captures the rate at which spectra are gathered, and optical bandwidth, which captures the breadth of chemical content that can be observed. The two variables are plotted against each other, since a significant difficulty lies in achieving both metrics simultaneously. For a better one to one comparison, the acquisition speeds listed for experiments that use focal plane arrays have been normalized to that of an analogous point scanning experiment.
+\mbox{Fig. \ref{fig:bckgnd}} attempts to visualize the significant developments that have been made in mid-infrared hyperspectral imaging over roughly the last two decades. Experiments are mapped onto the two important metrics of spectra acquisition speed, which captures the rate at which spectra are gathered, and optical bandwidth, which captures the breadth of chemical content that can be observed. The two variables are plotted against each other, since a significant difficulty lies in achieving both metrics simultaneously. For a better one to one comparison, the acquisition speeds listed for experiments that use focal plane arrays have been normalized to that of an analogous point scanning experiment.
 
 % why are these two important variables? Present it maybe as "information content"?
 
@@ -45,9 +45,9 @@ More recently, dual-comb spectroscopy (DCS) in the frequency comb community has 
     \Delta \nu = \frac{f_r^2}{2 \Delta f_r}
 \end{align}
 % 
-where $\Delta f_r$ is the interferogram acquisition rate equal to the difference of the two laser repetition rates. The diagonal dashed lines in \mbox{Fig.\ref{fig:bckgnd}}., show the $f_r^2/2$ trade-off between resolvable bandwidth and acquisition speed in DCS for different repetition rates. Evidently, when broad absorption features allow for coarse resolution, the highest repetition rates are desired. However, in order to reach sufficient power per comb tooth, in practice the pulse energy required for nonlinear frequency down-conversion from the near-infrared sets an upper limit on the obtainable repetition rate. In this work, we utilize a set of recently developed 1-GHz mid-infrared frequency combs \cite{hoghooghi_broadband_2022} to integrate a dual-comb spectrometer with a confocal microscope. We capitalize on the high repetition rate by fully filling the third Nyquist band (\mbox{2595 $\mathrm{cm^{-1}}$}--\mbox{3890 $\mathrm{cm^{-1}}$} at \mbox{$\Delta f_r=12.86\text{kHz}$}). The system is among the fastest performers in the class of spectrometers covering over \mbox{1000 $\mathrm{cm^{-1}}$} with high spectral resolution in the mid-infrared.
+where $\Delta f_r$ is the interferogram acquisition rate equal to the difference of the two laser repetition rates. The diagonal dashed lines in \mbox{Fig. \ref{fig:bckgnd}}., show the $f_r^2/2$ trade-off between resolvable bandwidth and acquisition speed in DCS for different repetition rates. Evidently, when broad absorption features allow for coarse resolution, the highest repetition rates are desired. However, in order to reach sufficient power per comb tooth, in practice the pulse energy required for nonlinear frequency down-conversion from the near-infrared sets an upper limit on the obtainable repetition rate. In this work, we utilize a set of recently developed 1-GHz mid-infrared frequency combs \cite{hoghooghi_broadband_2022} to integrate a dual-comb spectrometer with a confocal microscope. We capitalize on the high repetition rate by fully filling the third Nyquist band (\mbox{2595 $\mathrm{cm^{-1}}$}--\mbox{3890 $\mathrm{cm^{-1}}$} at \mbox{$\Delta f_r=12.86\text{kHz}$}). The system is among the fastest performers in the class of spectrometers covering over \mbox{1000 $\mathrm{cm^{-1}}$} with high spectral resolution in the mid-infrared.
 
-However, pointing to the dashed line in the upper right corner of \mbox{Fig.\ref{fig:bckgnd}}, in order to achieve the ultimate goal of label-free broadband video-rate imaging, we note that the ideal DCS platform would operate with repetition rates of 10 GHz or higher. Such systems would likely require either high-power amplifiers or a nanophotonic design capable of generating equivalent bandwidths in the mid-infrared with pump pulse energies around 100 pJ.
+However, pointing to the dashed line in the upper right corner of \mbox{Fig. \ref{fig:bckgnd}}, in order to achieve the ultimate goal of label-free broadband video-rate imaging, we note that the ideal DCS platform would operate with repetition rates of 10 GHz or higher. Such systems would likely require either high-power amplifiers or a nanophotonic design capable of generating equivalent bandwidths in the mid-infrared with pump pulse energies around 100 pJ.
 
 % Compared to previous work in dual-comb MIR imaging \cite{ullah_khan_direct_2020}, we show
 
@@ -84,9 +84,9 @@ Two 1-GHz mid-infrared frequency combs are generated and coupled into $\mathrm{I
 
 \section{Results}
 
-As a demonstration, hyperspectral images are taken of a USAF resolution target composed of SU-8 photoresist patterned onto a 500 $\mathrm{\mu m}$ thick Silicon wafer. Five hundred spectra are averaged at each pixel and apodized to 100 GHz (3.3 $\mathrm{cm^{-1}}$). The images are generated by integrating a \mbox{$\sim$63 $\mathrm{cm^{-1}}$} window around the peak absorption at \mbox{$\sim$2930 $\mathrm{cm^{-1}}$}. 
+As a demonstration, hyperspectral images are taken of a USAF resolution target composed of SU-8 photoresist patterned onto a 500 $\mathrm{\mu m}$ thick Silicon wafer. Five hundred spectra (39 ms) are averaged at each pixel and apodized to 100 GHz (\mbox{3.3 $\mathrm{cm^{-1}}$}). Point spectra shown in \mbox{Fig. \ref{fig:su8}.(b).} are taken at each pixel to generate the hypercube. The images are generated by integrating a \mbox{$\sim$63 $\mathrm{cm^{-1}}$} window around the peak absorption at \mbox{$\sim$2930 $\mathrm{cm^{-1}}$}. 
 
-% using the peak absorbance value at The broad absorption of SU-8 is shown in \mbox{Fig.\ref{fig:su8}.(b).}, with the images 
+% The SU-8 doesn't work too well as a knife-edge, so it's hard to state a spatial resolution that's rigorously calculated.
 
 \begin{figure}[h]
     \centering
@@ -95,7 +95,11 @@ As a demonstration, hyperspectral images are taken of a USAF resolution target c
     \label{fig:su8}
 \end{figure}
 
-\begin{figure}[h]
+For a biologically relevant sample, we image a cross-section of ovarian cancer tissue (\dots add info), where the paraffin wax was removed prior to dual-comb imaging. Five hundred spectra are again averaged at each pixel and apodized to \mbox{3.3 $\mathrm{cm^{-1}}$}. Point spectra shown by the orange curve in \mbox{Fig. \ref{fig:bio}.(b).} are taken at each pixel, with the two C-H anti-symmetric stretch bands visible at 2850 and \mbox{2920 $\mathrm{cm^{-1}}$}. A DCS spectrum taken with two second averaging time (25,700 averages) is shown by the green curve, and a comparison spectrum taken using a commercial FTIR with \mbox{7.61 $\mathrm{cm^{-1}}$} frequency resolution (\dots add info) is shown in the red curve. Apart from a broadening of the peak, good qualitative agreement is observed between the DCS and FTIR spectra. The FTIR image was taken prior to the removal of paraffin wax, which accounts for the broadening of the peaks when compared to the spectra taken using DCS. The images are generated by taking a slice through the hypercube at the peak of the \mbox{2920 $\mathrm{cm^{-1}}$} band. 
+
+% In addition to the spectral comparison, spatial comparison is also good ...
+
+\begin{figure}[h]0
     \centering
     \includegraphics[width=\linewidth]{bio_image_w_FTIR_comparison.png}
     \caption{Caption}
@@ -110,16 +114,16 @@ Regardless of the imaging method, the final determination of imaging speed is gi
     \label{eq:snr}
 \end{align}
 % 
-where $N$ is the number of frequency bins. This scaling rule is shown in \mbox{Fig.\ref{fig:snr_analysis}.(c-d).}, where it is observed to match the experimentally measured absorbance noise. The two-variable map in  \mbox{Fig.\ref{fig:snr_analysis}.(d).} should apply more generally to to any DCS point scanning microscopy, but with the time axis scaled accordingly to the repetition rate. 
+where $N$ is the number of frequency bins. This scaling rule is shown in \mbox{Fig. \ref{fig:snr_analysis}.(c-d).}, where it is observed to match the experimentally measured absorbance noise. The two-variable map in  \mbox{Fig. \ref{fig:snr_analysis}.(d).} should apply more generally to to any DCS point scanning microscopy, but with the time axis scaled accordingly to the repetition rate. 
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\linewidth]{snr_analysis.png}
-    \caption{Summary of DCS Imaging Speed. (a) The size of the optical Nyquist window plotted against acquisition speed ($\Delta f_r$) for different repetition rates. (b) DCS spectrum taken at different averaging times and frequency resolution/apodization windows. (c) The spectra's SNR follow the scaling of \mbox{Eq.\ref{eq:snr}}, with an example of the 2D parameter space (d) mapped out for the 1-GHz system.}
+    \caption{Summary of DCS Imaging Speed. (a) The size of the optical Nyquist window plotted against acquisition speed (\mbox{$\Delta f_r$}) for different repetition rates. (b) DCS spectrum taken at different averaging times and frequency resolution/apodization windows. (c) The spectra's SNR follow the scaling of \mbox{Eq.\ref{eq:snr}}, with an example of the 2D parameter space (d) mapped out for the 1-GHz system.}
     \label{fig:snr_analysis}
 \end{figure}
 
-Shown in \mbox{Fig.\ref{fig:snr_analysis}.(a).}, a baseline for 1 GHz DCS is that a 1000 $\mathrm{cm^{-1}}$ Nyquist window can be covered with \mbox{$\sim$17 kHz} spectra acquisition speed, which is a two order magnitude improvement over well established 100 MHz mid-infrared dual-comb systems. In \mbox{Fig.\ref{fig:snr_analysis}.(b).}, a single-shot spectrum (77 $\mathrm{\mu s}$) at 1-GHz has low signal to noise, but can be averaged to high SNR in two seconds (>25,000 spectra). However, a high SNR can be achieved in \mbox{$\sim$39 ms} at 500 averages if the interferograms are apodized to 100 GHz (\mbox{$\sim$3.33 $\mathrm{cm^{-1}}$}).  The SNR as a function of averaging time and frequency resolution is shown in \mbox{Fig.\ref{fig:snr_analysis}.(c-d).}; the absorbance noise always averages down according to $1/\sqrt{N_{avg}}$, but with coarser resolution resulting in a directly proportional overall noise reduction. 
+Shown in \mbox{Fig. \ref{fig:snr_analysis}.(a).}, a baseline for 1 GHz DCS is that a 1000 $\mathrm{cm^{-1}}$ Nyquist window can be covered with \mbox{$\sim$17 kHz} spectra acquisition speed, which is a two order magnitude improvement over well established 100 MHz mid-infrared dual-comb systems. In \mbox{Fig. \ref{fig:snr_analysis}.(b).}, a single-shot spectrum (77 $\mathrm{\mu s}$) at 1-GHz has low signal to noise, but can be averaged to high SNR in two seconds (>25,000 spectra). However, a high SNR can be achieved in \mbox{$\sim$39 ms} at 500 averages if the interferograms are apodized to 100 GHz (\mbox{$\sim$3.33 $\mathrm{cm^{-1}}$}).  The SNR as a function of averaging time and frequency resolution is shown in \mbox{Fig. \ref{fig:snr_analysis}.(c-d).}; the absorbance noise always averages down according to $1/\sqrt{N_{avg}}$, but with coarser resolution resulting in a directly proportional overall noise reduction. 
 
 % it's important to note, that all this analysis concerns data prior to any additional SNR enhancement via post-processing. So, it does not preclude those methods. But adding that dimension should just mean you can live with acquiring less SNR and move all the curves down by whatever factor the post-processing buys you in terms of SNR. I think this is especially relevant for the QCL stuff
 
