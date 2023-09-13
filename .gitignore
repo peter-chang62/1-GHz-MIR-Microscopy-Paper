@@ -16,3 +16,9 @@ Optica-template.bbl
 *.log
 
 *.gz
+
+*.bcf
+
+*.xml
+
+*.xdv
