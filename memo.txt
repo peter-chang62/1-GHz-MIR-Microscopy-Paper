@@ -1,0 +1,28 @@
+
+2023-09-25T09:38: you know, part of them thinking that it's not ready is the fact that you tell them it's not, and so they don't bother to read it. I know you've told Scott, you can take a look now, but he hasn't because he thinks you're saying it's still incomplete, so it's not enough of an activation energy for him to read it. 
+
+
+2023-09-25T10:21: remaining items for draft v1
+
+Abstract -> incomplete
+Introduction -> complete
+Experiment & Results -> complete
+Dicussion -> complete
+figure labels for su8 and bio images -> incomplete
+Conclusion -> complete
+
+so, just missing abstract and conclusion! for thinking purposes, write the conclusion first
+
+items with Scott today:
+    1. mention state of the figure 9 laser, 
+        a. you follow the cut back according to the slides you showed him last time (pull it up). You've added other quick "functions" to quickly calculate how much to cut on each cut back to target a round trip dispersion value. 
+        b. you can't get rid of peak. it looks CW, but not sure what it is, it's not where the CW peak was located prior to mode-locking, off by like 15 nm. and the dispersion balancing is not repeatable between different rep-rates, using gain fiber lengths that shouldn't be an issue.
+        c. Tsung-Han still suspects the phase-shifter. A lossy component most generally, phase shifter more specifically. You're holding out on micro-mirror, since you don't think it's been eliminated in the testing process...
+        d. told Sichong to priortize other items rather than shadowing you every time you go splice because you think it's not a good learning opportunity to just stand there for hours.
+
+    2. state of paper:
+        a. on track to push out draft by end of this evening, sorry got caught up with some paper review and wedding you forgot you were attendign this weekend until Friday
+
+    3. I need a speedtype, hopefully can walk out with one from your meeting with Scott. We need those parts ordered ASAP. 
+
+    4. Nlight did not get back to you, just followed up with a new quotation request today.
