@@ -50,7 +50,7 @@ The effort to push the barrier of spectral acquisition speed without compromisin
 % 2. QCL and FTS
 Coherent Raman spectro-imaging has achieved in-vivo video-rate speeds in the mid-infrared \cite{evansChemicalImagingTissue2005, saarVideoRateMolecularImaging2010} using well-established near-infrared femtosecond oscillators. Whereas initial demonstrations were over a narrow bandwidth (\mbox{$\sim$3 $\mathrm{cm^{-1}}$}), broad bandwidths at high acquisition speeds have been achieved using rapidly rotating polygonal mirror scanners \cite{tamamitsuUltrafastBroadbandFouriertransform2017, linMicrosecondFingerprintStimulated2021}. The high metrics are possible with the strong Raman absorption cross-sections around \mbox{2900 $\mathrm{cm^{-1}}$}. It is challenging, however, for Raman spectroscopy-based platforms to reach the same performance in the fingerprint region at longer wavelengths. An important target, therefore, is to achieve similar performance with direct mid-infrared illumination.
 
-Fourier transform spectroscopy (FTS) and quantum cascade laser (QCL) based imaging are attractive due to their broad applicability across the mid to long wavelength infrared. The high absorption cross-sections alleviate the need for operation at powers close to sample-damage thresholds, a concern that is applicable to biological samples. In this category, FTS spectrometers coupled to broadband and bright sources such as synchrotron facilities have set the state of the art for the combination of spectral bandwidth and speed \cite{nasseHighresolutionFouriertransformInfrared2011}. However, a widely accessible imaging method would benefit from having a table top setup. QCL lasers are attractive due to their direct emission in the mid-infrared and small footprint, although their performance is best leveraged in narrowband applications. Tunable QCL packages consisting of multiple QCL chips combined into one device \cite{yehFastInfraredChemical2015,goyalActiveHyperspectralImaging2014,zimmerleiterQCLbasedMidinfraredHyperspectral2021} can reach broad spectral coverage, but further improvement is needed to reach noise figures comparable to platforms based on mode-locked lasers.
+Fourier transform spectroscopy (FTS) and quantum cascade laser (QCL) based imaging are attractive due to their broad applicability across the mid to long wavelength infrared. The high absorption cross-sections alleviate the need for operation at powers close to sample-damage thresholds, a concern that is applicable to biological samples. In this category, FTS spectrometers coupled to broadband and bright sources such as synchrotron facilities have set the state of the art for the combination of spectral bandwidth and speed \cite{nasseHighresolutionFouriertransformInfrared2011}. However, a widely accessible imaging method would benefit from having a table top setup. To address this, QCL lasers are attractive due to their direct emission in the mid-infrared and small footprint, although their performance is best leveraged in narrowband applications. Tunable QCL packages consisting of multiple QCL chips combined into one device \cite{yehFastInfraredChemical2015,goyalActiveHyperspectralImaging2014,zimmerleiterQCLbasedMidinfraredHyperspectral2021} can reach broad spectral coverage, but further improvement is needed to reach noise figures comparable to platforms based on mode-locked lasers.
 
 % The coupling of broadband synchrotron light into a microscope requires the active stabilization of a beam bundle. A widely accessible imaging method would benefit from ...
 
@@ -59,7 +59,7 @@ Fourier transform spectroscopy (FTS) and quantum cascade laser (QCL) based imagi
 
 % up conversion is not new, you should present it as one method, the pinnacle of which is below. take a look at the zotero folder i've made.
 
-A useful alternative method to boost imaging speed in the mid-infrared is to employ up-conversion to shorter wavelengths in order to leverage low-cost near-infrared cameras, whose performance can significantly exceed mid-infrared focal plane arrays \cite{junaidVideorateMidinfraredHyperspectral2019,knezInfraredChemicalImaging2020,potmaRapidChemicallySelective2021}. A recent demonstration covered \mbox{$>$$1000 \; \mathrm{cm^{-1}}$} \cite{zhaoHighspeedScanlessEntire2023} in eight seconds. 
+An alternative method to boost imaging speed in the mid-infrared is to employ up-conversion to shorter wavelengths in order to leverage low-cost near-infrared cameras, whose performance can significantly exceed mid-infrared focal plane arrays \cite{junaidVideorateMidinfraredHyperspectral2019,knezInfraredChemicalImaging2020,potmaRapidChemicallySelective2021}. A recent demonstration covered \mbox{$>$$1000 \; \mathrm{cm^{-1}}$} \cite{zhaoHighspeedScanlessEntire2023} in eight seconds. 
 % 
 % In this modality, a few cycle mid-infrared pulse is imaged from the sample plane onto a $\chi^{(2)}$ nonlinear crystal where it is overlapped with a long near-infrared pump pulse. The pump pulse's long picosecond duration causes the generated sum frequency light to encode the free-induction decay with few wavenumber resolution. Mapping the mid-infrared image to the near-infrared allows the use of a high-speed near-infrared hyperspectral camera. 
 % 
@@ -92,7 +92,45 @@ However, in order to reach sufficient power per comb tooth, in practice the puls
 
 % I think you say "repetition rate" too many times
 
-However, pointing to the dashed line in the upper right corner of \mbox{Fig. \ref{fig:bckgnd}}, in order to achieve the ultimate goal of label-free broadband video-rate imaging, we note that the ideal DCS platform would operate with repetition rates of 10 GHz or higher. Such systems would likely require either high-power fiber amplifiers or a nanophotonic design capable of generating equivalent bandwidths in the mid-infrared with pump pulse energies around 100 pJ prior to facet loss.
+% However, pointing to the dashed line in the upper right corner of \mbox{Fig. \ref{fig:bckgnd}}, in order to achieve the ultimate goal of label-free broadband video-rate imaging, we note that the ideal DCS platform would operate with repetition rates of 10 GHz or higher. Such systems would likely require either high-power fiber amplifiers or a nanophotonic design capable of generating equivalent bandwidths in the mid-infrared with pump pulse energies around 100 pJ prior to facet loss.
+
+\section{Roadmap for Imaging Speed}
+% ---- move snr analysis to here ----
+Whereas Fig. 1 illustrates the significant challenge of optical bandwidth and spectral acquisition rate, it is difficult to fully capture the metric of imaging speed, which in the end is determined by the averaging time needed to reach sufficient SNR at each pixel. Consequently, it is useful to have an experimentally driven map of imaging speed in the relevant case of point scanning dual-comb microscopy, where the target SNR and frequency resolution sets the pixel dwell time.
+
+In DCS, the absorbance noise $\sigma$ scales with the frequency resolution and number of averaged spectra $N_{avg}$ according to \cite{newburySensitivityCoherentDualcomb2010}: 
+% 
+\begin{align}
+    \sigma \propto \frac{N}{\sqrt{N_{avg}}}\sqrt{\epsilon}
+    \label{eq:snr}
+\end{align}
+% 
+where $N$ is the number of frequency bins and $\epsilon=\nu_{res}/f_{r}$ is referred to as the duty cycle, where $\nu_{res}$ is the frequency resolution and $f_r$ is the repetition rate. This scaling rule is shown in \mbox{Fig. \ref{fig:snr_analysis}.(c-d).}, where it is observed to match the experimentally measured absorbance noise. Importantly, for post-processing \mbox{Eq. \ref{eq:snr}} entails a square root scaling improvement in SNR for both the averaging time and apodization of interferograms. The artificial resolution affected by apodization is penalized by the factor of $\sqrt{\epsilon}$, which softens the benefit of apodization to an effective $1/\sqrt{N}$ scaling. A directly proportional scaling improvement can be achieved, however, if one moves to a higher rep-rate source with larger mode-spacing.
+
+% The two-variable map in  \mbox{Fig. \ref{fig:snr_analysis}.(d).} should apply more generally to any DCS point scanning microscopy, but with the time axis scaled accordingly to the repetition rate as $\propto 1 / f_r^2$. 
+
+% The size of the optical Nyquist window plotted against acquisition speed (\mbox{$\Delta f_r$}) for different repetition rates. 
+
+% (c) The spectra's SNR follow the scaling of \mbox{Eq.\ref{eq:snr}}, with an example of the 2D parameter space (d) mapped out for the 1-GHz system.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{snr_analysis_v3.png}
+    \caption{Summary of DCS Imaging Speed. (a) DCS spectra taken at different averaging times and frequency resolution/apodization windows. (b) The absorbance SNR as a function of frequency resolution set by a boxcar apodization window. For apodization in post-processing, the absorbance noise increases with the square root of the number of frequency bins. (c) The absorbance SNR as a function of averaging time. Similar to the benefit of apodization, the SNR increases as the square root of the averaging time. (d). The 2D parameter space illustrated by combining (b) and (c) for the 1-GHz system.}
+    \label{fig:snr_analysis}
+\end{figure}
+
+This is illustrated in \mbox{Fig. \ref{fig:snr_analysis}.(a).} for the case of 1 GHz frequency combs. A baseline for 1 GHz DCS is that a 1000 $\mathrm{cm^{-1}}$ Nyquist window can be covered with \mbox{$\sim$17 kHz} spectra acquisition speed. In \mbox{Fig. \ref{fig:snr_analysis}.(a).}, a single-shot spectrum (78 $\mathrm{\mu s}$) at 1 GHz resolution has low signal to noise, but can be averaged to high SNR in two seconds (>25,000 spectra). However, \mbox{$\mathrm{SNR>200}$} can also be achieved in \mbox{$\sim$39 ms} at 500 averages if the interferograms are apodized to 100 GHz (\mbox{$\sim$3.33 $\mathrm{cm^{-1}}$}), which is a more appropriate sampling interval for the given absorption features. The SNR as a function of averaging time and frequency resolution is shown in \mbox{Fig. \ref{fig:snr_analysis}.(b-d).}. The absorbance noise averages down according to $1/\sqrt{N_{avg}}$, and with coarser resolution resulting in a similar $1/\sqrt{N}$ noise reduction. 
+
+% ---- workign on this
+% More importantly, the experimental illustration of \mbox{Eq. \ref{eq:snr}} in \mbox{Fig. \ref{fig:snr_analysis}} provides a road map for the integration of high rep-rate sources in the field of microscopy (\mbox{Fig. \ref{fig:bckgnd}}).
+More importantly, this experimental analysis of bandwidth, SNR, frequency resolution, and imaging speed provides a roadmap for the integration of high rep-rate sources into the field of microscopy (\mbox{Fig. \ref{fig:bckgnd}}). The time, $\tau_{ifg}$, to acquire a single spectrum or interferogram decreases with the rep-rate according to $\tau_{ifg} \propto 1 / f_r^2$. However, an important additional consideration is the direct $\sigma \propto N$ improvement gained from the coarser resolution, compared to the $\sigma \propto \sqrt{N}$ improvement in the case of apodization. Practically speaking, for a fixed optical bandwidth, frequency resolution and target SNR, the imaging speed follows a $f_r^3$ scaling. As an example, in our previous work with 100 MHz mid-infrared DCS \cite{lindMidInfraredFrequencyComb2020,timmersMolecularFingerprintingBright2018} a comparable SNR was reached with \mbox{$\sim$ 1} minute averaging per pixel, whereas a potential 10 GHz DCS platform can reach the same SNR in 39 $\mathrm{\mu s}$ reducing the overall experiment time from the several hours in this experiment down to \mbox{$\sim$ 10} seconds.
+
+% I remember Dan said minutes???? Double check with Scott!
+
+% Referring back to \mbox{Eq. \ref{eq:dcs}}, the time to acquire a single interferogram decreases with the rep-rate according $\tau_{ifg} \propto 1 / f_r^2$. However, an important additional consideration is the directly proportional SNR improvmenet with the rep-rate from $\sigma \propto N$ in \mbox{Eq. \ref{eq:snr}}. Consequently, for spectra apodized to 100 GHz resolution, the same SNR is achieved at $\mathrm{f_r}=1$ GHz with 10x fewer averaged spectra than 100 MHz. Consequently, the two-variable map in  \mbox{Fig. \ref{fig:snr_analysis}.(d).} should apply more generally to DCS point scanning microscopy with lower and higher $f_r$, but with the time-axis scaled accordingly. As an example, well established 100 MHz mid-infrared DCS \cite{lindMidInfraredFrequencyComb2020,timmersMolecularFingerprintingBright2018} would reach the same SNR at 3.9 s per pixel extending the overall experiment time to over a day, \cite{timmersHyperspectralMicroscopyBroadband2019}, while 10 GHz DCS would reach the SNR in 390 $\mathrm{\mu s}$ reducing the overall experiment time from the several hours in this experiment down to minutes.
+% -----
+
 
 % Compared to previous work in dual-comb MIR imaging \cite{ullah_khan_direct_2020}, we show
 
@@ -103,7 +141,7 @@ However, pointing to the dashed line in the upper right corner of \mbox{Fig. \re
 
 % The EOM MIR DCS is actually at 18 GHz, but they use an FPA so they can't go as fast as the repetition rate allows them for each pixel at a time.
 
-\section{1 GHz MIR Dual-Comb Microscopy}
+\section{Experiment}
 
 % you mentioned pulse energy difficulty before, maybe a brief but to the point statement of how this is achieved in this system
 
@@ -127,40 +165,6 @@ Shown in \mbox{Fig. \ref{fig:setup}}, to compensate for the low conversion effic
 
 Two 1-GHz mid-infrared frequency combs are generated and coupled into $\mathrm{InF_3}$ single-mode fiber for delivery to the experiment. The output beam is collimated with a two inch off-axis parabolic mirror, and a reflective confocal microscope with 0.58 NA is used to image the beam onto a glass slide (\mbox{$\sim$5 $\mathrm{\mu m}$} pixel size). A set of linear translation stages are used to raster scan the sample. The data is acquired via trigger, with the trigger spacing and scan speed set by the desired spatial sampling interval. The scan speed is limited only by the interferogram acquisition time, which is fundamentally set by the repetition rate of the laser. The transmitted signal is focused onto a high-speed MCT detector, whose AC coupled port is digitized at 1 GS/s using an FPGA (GaGe model \#). The data is streamed concurrently from the card memory into PC RAM for real-time analysis, and such that the card-memory does not limit the data volume. Owing to the fairly high 500 MHz Nyquist frequency, and the placement of all fiber amplifiers in loop for the phase-locks of the two frequency combs, over one thousand interferograms can be directly averaged before phase correction needs to be employed \cite{hebertSelfcorrectedChipbasedDualcomb2017,hebertSelfCorrectionLimitsDualComb2019}.
 
-% ---- move snr analysis to here ----
-The final determination of imaging speed is given by the time needed to reach sufficient SNR at each pixel. Specifically for DCS microscopy, the target SNR and frequency resolution sets the pixel dwell time. In DCS, the absorbance noise $\sigma$ scales with the frequency resolution and number of averaged spectra $N_{avg}$ according to \cite{newburySensitivityCoherentDualcomb2010}: 
-% 
-\begin{align}
-    \sigma \propto \frac{N}{\sqrt{N_{avg}}}\sqrt{\epsilon}
-    \label{eq:snr}
-\end{align}
-% 
-where $N$ is the number of frequency bins and $\epsilon=\nu_{res}/f_{r}$ is referred to as the duty cycle, where $\nu_{res}$ is the frequency resolution and $f_r$ is the repetition rate. This scaling rule is shown in \mbox{Fig. \ref{fig:snr_analysis}.(c-d).}, where it is observed to match the experimentally measured absorbance noise. Importantly, for post-processing \mbox{Eq. \ref{eq:snr}} entails a square root scaling improvement in SNR for both the averaging time and apodization of interferograms. The artificial resolution affected by apodization is penalized by the factor of $\sqrt{\epsilon}$, which reduces the improvement to an effective $1/\sqrt{N}$ scaling. A directly proportional scaling improvement can be achieved, however, if one moves to a higher rep-rate source with larger mode-spacing.
-
-% The two-variable map in  \mbox{Fig. \ref{fig:snr_analysis}.(d).} should apply more generally to any DCS point scanning microscopy, but with the time axis scaled accordingly to the repetition rate as $\propto 1 / f_r^2$. 
-
-% The size of the optical Nyquist window plotted against acquisition speed (\mbox{$\Delta f_r$}) for different repetition rates. 
-
-% (c) The spectra's SNR follow the scaling of \mbox{Eq.\ref{eq:snr}}, with an example of the 2D parameter space (d) mapped out for the 1-GHz system.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\linewidth]{snr_analysis_v3.png}
-    \caption{Summary of DCS Imaging Speed. (a) DCS spectra taken at different averaging times and frequency resolution/apodization windows. (b) The absorbance SNR as a function of frequency resolution set by a boxcar apodization window. For apodization in post-processing, the absorbance noise increases with the square root of the number of frequency bins. (c) The absorbance SNR as a function of averaging time. Similar to the benefit of apodization, the SNR increases as the square root of the averaging time. (d). The 2D parameter space illustrated by combining (b) and (c) for the 1-GHz system.}
-    \label{fig:snr_analysis}
-\end{figure}
-
-Shown in \mbox{Fig. \ref{fig:snr_analysis}.(a).}, a baseline for 1 GHz DCS is that a 1000 $\mathrm{cm^{-1}}$ Nyquist window can be covered with \mbox{$\sim$17 kHz} spectra acquisition speed. In \mbox{Fig. \ref{fig:snr_analysis}.(a).}, a single-shot spectrum (78 $\mathrm{\mu s}$) at 1 GHz resolution has low signal to noise, but can be averaged to high SNR in two seconds (>25,000 spectra). However, a high SNR can also be achieved in \mbox{$\sim$39 ms} at 500 averages if the interferograms are apodized to 100 GHz (\mbox{$\sim$3.33 $\mathrm{cm^{-1}}$}), which is a more appropriate sampling interval for the given absorption features. The SNR as a function of averaging time and frequency resolution is shown in \mbox{Fig. \ref{fig:snr_analysis}.(b-d).}. The absorbance noise averages down according to $1/\sqrt{N_{avg}}$, and with coarser resolution resulting in a similar $1/\sqrt{N}$ noise reduction. 
-
-% ---- workign on this
-% More importantly, the experimental illustration of \mbox{Eq. \ref{eq:snr}} in \mbox{Fig. \ref{fig:snr_analysis}} provides a road map for the integration of high rep-rate sources in the field of microscopy (\mbox{Fig. \ref{fig:bckgnd}}).
-More importantly, this experimental analysis of bandwidth, SNR, frequency resolution, and imaging speed provides a roadmap for the integration of high rep-rate sources into the field of microscopy (\mbox{Fig. \ref{fig:bckgnd}}). The time to acquire a single spectrum / interferogram, $\tau_{ifg}$, decreases with the rep-rate according to $\tau_{ifg} \propto 1 / f_r^2$. However, an important additional consideration is the direct $\sigma \propto N$ improvement gained from the coarser resolution, compared to the $\sigma \propto \sqrt{N}$ improvement in the case of apodization. Practically speaking, for a fixed optical bandwidth, frequency resolution and target SNR, the imaging speed obeys a $\propto f_r^3$ scaling. As an example, our previous work with 100 MHz mid-infrared DCS \cite{lindMidInfraredFrequencyComb2020,timmersMolecularFingerprintingBright2018} reached comparable SNR with \mbox{$\sim$ 1} minute. averaging per pixel, whereas a potential 10 GHz DCS platform can reach the same SNR in 39 $\mathrm{\mu s}$ reducing the overall experiment time from the several hours in this experiment down to \mbox{$\sim$ 10} seconds.
-
-% I remember Dan said minutes???? Double check with Scott!
-
-% Referring back to \mbox{Eq. \ref{eq:dcs}}, the time to acquire a single interferogram decreases with the rep-rate according $\tau_{ifg} \propto 1 / f_r^2$. However, an important additional consideration is the directly proportional SNR improvmenet with the rep-rate from $\sigma \propto N$ in \mbox{Eq. \ref{eq:snr}}. Consequently, for spectra apodized to 100 GHz resolution, the same SNR is achieved at $\mathrm{f_r}=1$ GHz with 10x fewer averaged spectra than 100 MHz. Consequently, the two-variable map in  \mbox{Fig. \ref{fig:snr_analysis}.(d).} should apply more generally to DCS point scanning microscopy with lower and higher $f_r$, but with the time-axis scaled accordingly. As an example, well established 100 MHz mid-infrared DCS \cite{lindMidInfraredFrequencyComb2020,timmersMolecularFingerprintingBright2018} would reach the same SNR at 3.9 s per pixel extending the overall experiment time to over a day, \cite{timmersHyperspectralMicroscopyBroadband2019}, while 10 GHz DCS would reach the SNR in 390 $\mathrm{\mu s}$ reducing the overall experiment time from the several hours in this experiment down to minutes.
-% -----
-
 To verify the spatial resolution, hyperspectral images are taken of a USAF resolution target composed of SU-8 photoresist patterned onto a \mbox{500 $\mathrm{\mu m}$} thick Silicon wafer. Five hundred spectra (39 ms) are averaged at each pixel and apodized to 100 GHz (\mbox{3.3 $\mathrm{cm^{-1}}$}). Point spectra shown in \mbox{Fig. \ref{fig:su8}.(b).} are taken at each pixel to generate the hypercube. The images are generated by integrating a \mbox{$\sim$63 $\mathrm{cm^{-1}}$} window around the peak absorption at \mbox{$\sim$2930 $\mathrm{cm^{-1}}$}. A spatial resolution of \mbox{$5 \; \mathrm{\mu m}$} is estimated from the line scans across the SU-8 bars.
 
 % The SU-8 doesn't work too well as a knife-edge, so it's hard to state a spatial resolution that's rigorously calculated.
@@ -176,7 +180,7 @@ For a biologically relevant sample, we image a cross-section of ovarian cancer t
 
 % In addition to the spectral comparison, spatial comparison is also good ...
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{bio_image_w_FTIR_comparison.png}
     \caption{Hyperspectral image of ovarian cancer tissue (a) absorbance at \mbox{2920 $\mathrm{cm^{-1}}$} taken at \mbox{1.2 $\mathrm{\mu m}$} sampling (b) Absorbance curves taken on cancer tissue with two second average in green, 39 ms average in orange, and with a commercial FTIR in red (c) zoom out of (a) to include absorbance image of the whole core at \mbox{2920 $\mathrm{cm^{-1}}$} taken with \mbox{5 $\mathrm{\mu m}$} spatial sampling (d) equivalent image to (c) but taken using a commercial FTIR microscope using a focal plane array.}
