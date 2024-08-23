@@ -32,3 +32,5 @@ blender/
 *.aux
 
 *.fdb_latexmk
+
+aiptemplate.pdf
