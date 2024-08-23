@@ -28,3 +28,7 @@ Optica-template.pdf
 references.bib
 
 blender/
+
+*.aux
+
+*.fdb_latexmk
